@@ -14,6 +14,7 @@ let x3Speed = 1;  // speed in X direction
 let y3Speed = 1; // speed in Y direction
 let d3 = 40;      // diameter of the ball
 
+
 function setup() {
   createCanvas(400, 400,);
 
@@ -35,6 +36,7 @@ function draw() {
     y1Speed = y1Speed * -1;  
   }
   y1 = y1 + y1Speed;
+
   ellipse(x1, y1, d1);
 
  
@@ -66,10 +68,18 @@ function draw() {
   y3 = y3 + y3Speed;
 strokeWeight (4) ;
 stroke (51);
-noFill()
+if (mouseIsPressed == true ){
+  fill (255); //white
+}
+else {
+  fill (0); //black
+}
   rect(x3, y3, 80, 80)
   
-
+//draws ellipse if mouse is pressed
+if (mouseIsPressed) {
+  ellipse(200, 200, 180, 180);
+}
 
 
   //the ellipse's x and y positions follow the mouse

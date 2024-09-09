@@ -5,8 +5,8 @@ let y1Speed = 7; // speed in Y direction
 let d1 = 20;      // diameter of the ball
 let x2 = 50;     // x position of the ball
 let y2 = 0;       // y position of the ball
-let x2Speed = 3;  // speed in X direction
-let y2Speed = 7; // speed in Y direction
+let x2Speed = 10;  // speed in X direction
+let y2Speed = 10; // speed in Y direction
 let d2 = 40;      // diameter of the ball
 
 function setup() {
@@ -45,5 +45,5 @@ function draw() {
   }
   y2 = y2 + y2Speed;
 
-  ellipse(x2, y2, d2);
+  rect(x2, y2, 10, 20)
 }

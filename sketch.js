@@ -8,6 +8,11 @@ let y2 = 0;       // y position of the ball
 let x2Speed = 10;  // speed in X direction
 let y2Speed = 10; // speed in Y direction
 let d2 = 40;      // diameter of the ball
+let x3 = 80;     // x position of the ball
+let y3 = 2;       // y position of the ball
+let x3Speed = 1;  // speed in X direction
+let y3Speed = 1; // speed in Y direction
+let d3 = 40;      // diameter of the ball
 
 function setup() {
   createCanvas(400, 400);
@@ -46,4 +51,18 @@ function draw() {
   y2 = y2 + y2Speed;
 
   rect(x2, y2, 10, 20)
+   // if x hits the right side or the left side of the canvas,
+  // switch directions...
+  if (x3 > width || x3 < 0) {
+    x3Speed = x3Speed * -1;  
+  }
+  x3 = x3 + x3Speed; // adding a negative xSpeed *decreases* x, right?
+  
+  // same as above, but for the top and bottom of the canvas
+  if (y3 > width || y3 < 0) {
+    y3Speed = y3Speed * -1;  
+  }
+  y3 = y3 + y3Speed;
+
+  rect(x3, y3, 10, 20)
 }
